@@ -53,6 +53,32 @@ public class Solution3_Circle {
         return  s;
     }
 }
+
+/*Написать программу, которая находит арифметическое и геометрическое среднее цифр шестизначного числа N.*/
+public class Solution4 {
+    public static void main(String[] args) {
+        System.out.println(DigitsSorted(67397565));
+    }
+    public static boolean DigitsSorted (int k)
+    {
+        int m = k % 10;
+        k /= 10;
+        if (m == k % 10) return false;
+
+        boolean abc = true;
+        if (k % 10 > m) abc = false;
+        while (k > 10) {
+            m= k % 10;
+             k/= 10;
+            if (abc) {
+                if (k  % 10 >= m) return false;
+            } else {
+                if ( k % 10 <= m) return false;
+            }
+        }
+        return true;
+    }
+}
 // Написать программу, которая переворачивает (реверсирует) семизначное число N (к примеру, число 1234567 реверсируется в число //7654321).
 
 public class Solution6 {
@@ -89,7 +115,37 @@ public class SwapAb {
 }
 
 //Написать программу, которая находит арифметическое и геометрическое среднее цифр шестизначного числа N.
+
 public class ArithmeticAndGeo {
+
+    public static void main(String[] args) {
+        System.out.println(ArithmeticAver(123456));
+        System.out.println(GeometricAver(123456));
+    }
+        public static float ArithmeticAver (int a)
+        {
+            int sum = a % 10;
+            int i = 1;
+            while ( a > 10) {
+                a /= 10;
+                sum += a % 10;
+                i++;
+            }
+            return sum / i;
+        }
+
+        public static double GeometricAver (int b)
+        {
+            int c = b % 10;
+            int i = 1;
+            while (b > 10) {
+                b /= 10;
+                c *= b % 10;
+                i++;
+            }
+            return Math.pow(c, 1.0/i);
+       }
+}
 
   
 
