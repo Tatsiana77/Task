@@ -49,7 +49,7 @@ public class Solution3_Circle {
         System.out.println(areaRing(3.1416, 10, 5));
     }
     public static double areaRing(double PI, double R1, double R2) {
-        double s = PI*(R1 * R1 - R2 * R2);
+   double s = PI* (Math.pow(R1, 2)- Math.pow(R2, 2));
         return  s;
     }
 }
