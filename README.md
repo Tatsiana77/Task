@@ -41,15 +41,15 @@ public class Solution {
 }
 /*На плоскости даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). Разработайте программу нахождения площади кольца, внешний радиус которого равен R1, а внутренний радиус равен R2.*/
 public class Solution3_Circle {
-    static double pi = 3.1416;
+    static double PI;
     static double R1;
     static double R2;
     public static void main(String[] args) {
 
         System.out.println(areaRing(3.1416, 10, 5));
     }
-    public static double areaRing(double pi, double R1, double R2) {
-        double s = pi*(R1 * R1 - R2 * R2);
+    public static double areaRing(double PI, double R1, double R2) {
+        double s = PI*(R1 * R1 - R2 * R2);
         return  s;
     }
 }
